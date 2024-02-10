@@ -151,6 +151,8 @@ def cli():
         "initial_prompt": args.pop("initial_prompt"),
         "suppress_tokens": [int(x) for x in args.pop("suppress_tokens").split(",")],
         "suppress_numerals": args.pop("suppress_numerals"),
+        "repetition_penalty" : 1.5,
+        "no_repeat_ngram_size" : 2,
     }
 
     writer = get_writer(output_format, output_dir)
